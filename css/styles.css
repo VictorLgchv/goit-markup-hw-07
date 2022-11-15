@@ -115,11 +115,11 @@ body {
 .menu__link:focus {
   color: var(--second-text-link-color);
 }
-.menu__link.active {
+.menu__link--active {
   color: var(--second-text-link-color);
 }
 
-.menu__link.active::after {
+.menu__link--active::after {
   content: "";
   position: absolute;
   bottom: -1.7px;
@@ -191,21 +191,13 @@ body {
 .contacts__link {
 }
 
-.contacts__link-mail {
-}
-
-.contacts__link-tel {
-}
-
 .contacts-icon {
   fill: var(--first-text-color);
   margin-right: 10px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contacts__link-mail:hover .contacts-icon,
-.contacts__link-mail:focus .contacts-icon,
-.contacts__link-tel:hover .contacts-icon,
-.contacts__link-tel:focus .contacts-icon {
+.contacts__link:hover .contacts-icon,
+.contacts__link:focus .contacts-icon {
   fill: var(--second-text-link-color);
 }
 
@@ -338,7 +330,7 @@ body {
     background-position: center;
 } */
 
-.feature-icon__contain {
+.list-feature__contain {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -347,7 +339,7 @@ body {
   margin-bottom: 30px;
 }
 
-.feature-icon {
+.list-feature__icon {
 }
 
 .list-feature__title {
@@ -388,13 +380,13 @@ body {
   flex-wrap: wrap;
   gap: 30px;
 }
-.list-doing {
+.doing-list {
 }
-.list-doing__item {
+.doing-list__item {
   position: relative;
 }
 
-.list-doing__item img {
+.doing-list__item img {
   display: block;
 }
 
@@ -470,7 +462,7 @@ body {
   letter-spacing: 0.03em;
 }
 
-.team-icons__list {
+.team-item__list {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -496,13 +488,13 @@ body {
   background-color: var(--second-text-logo-color);
 }
 
-.team-icon {
+.team-icons__icon {
   fill: var(--second-icons-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.team-icons__link:hover .team-icon,
-.team-icons__link:focus .team-icon {
+.team-icons__link:hover .team-icons__icon,
+.team-icons__link:focus .team-icons__icon {
   fill: var(--third-icons-color);
 }
 
@@ -540,7 +532,7 @@ body {
   width: calc((100% - 150px) / 6);
   height: 90px;
 }
-.clients-link {
+.clients__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -552,18 +544,18 @@ body {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.clients-link:hover,
-.clients-link:focus {
+.clients__link:hover,
+.clients__link:focus {
   border: 1px solid var(--second-text-logo-color);
 }
 
-.clients-icon {
+.clients__icon {
   fill: var(--first-icons-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.clients-link:hover .clients-icon,
-.clients-link:focus .clients-icon {
+.clients__link:hover .clients__icon,
+.clients__link:focus .clients__icon {
   fill: var(--second-text-logo-color);
 }
 
@@ -640,18 +632,18 @@ body {
   margin-bottom: 20px;
 }
 
-.footer-icons__list {
+.footer-links__list {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
-.footer-icons__item {
+.footer-links__item {
   width: 44px;
   height: 44px;
 }
 
-.footer-icons__link {
+.footer-links__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -662,14 +654,16 @@ body {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-icons__link:hover,
-.footer-icons__link:focus {
+.footer-links__link:hover,
+.footer-links__link:focus {
   background-color: var(--second-text-logo-color);
 }
 
-.footer__icon {
+.footer-links__icon {
   fill: var(--third-icons-color);
 }
+
+/* Subscribe */
 
 .footer__subscribe {
   margin-left: 93px;
@@ -738,7 +732,7 @@ body {
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn-svg {
+.btn__svg {
   display: inline-block;
   margin-left: 10px;
   fill: var(--third-icons-color);
@@ -768,7 +762,7 @@ body {
 
 .portfolio__container {
 }
-.portfolio-buttons__list {
+.portfolio-buttons{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -974,7 +968,7 @@ body {
 .form {
 }
 
-.form-contain__contain{
+.form__pos{
   margin-bottom: 20px;
 }
 
@@ -984,11 +978,11 @@ body {
   row-gap: 15px;
 }
 
-.form-contain__contain .form__contain:not(:last-child){
+.form__contain .form__contain:not(:last-child){
   margin-bottom: 10px;
 }
 
-.form-contain__label {
+.form__label {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16;
@@ -997,16 +991,16 @@ body {
   cursor: pointer;
 }
 
-.form-contain__label > .label__span{
+.form__label > .label__span{
   display: block;
   margin-bottom: 4px;
 }
 
-.form-contain__position{
+.form__position{
   position: relative;
 }
 
-.form-contain__input {
+.form__input {
   width: 100%;
   height: 40px;
   padding: 12px 42px;
@@ -1023,13 +1017,13 @@ line-height: 1.16;
 letter-spacing: 0.01em;
 }
 
-.form-contain__input:focus,
-.form-contain__input:active
+.form__input:focus,
+.form__input:active
 {
   border: 2px solid var(--second-text-logo-color);
 }
 
-.form-contain__icon {
+.form__icon {
   display: inline-block;
   position: absolute;
   left: 21px;
@@ -1039,11 +1033,11 @@ letter-spacing: 0.01em;
   cursor: pointer;
 }
 
-.form-contain__input:focus ~ .form-contain__icon {
+.form__input:focus ~ .form__icon {
   fill: var(--second-text-logo-color);
 }
 
-.form-contain__comment {
+.form__comment {
   width: 100%;
   height: 120px;
   padding: 12px 16px;
@@ -1063,17 +1057,17 @@ color: rgba(117, 117, 117, 0.5);
 outline-color: transparent;
 }
 
-.form-contain__comment:focus {
+.form__comment:focus {
   border: 2px solid var(--second-text-logo-color);
 }
 
-.label__checkbox {
+.checkbox__label {
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
 }
-.label-checkbox__checkbox {
+.label__checkbox {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -1083,7 +1077,7 @@ outline-color: transparent;
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-.label__checkbox-icon {
+.label__icon {
   display: inline-block;
   width: 15px;
   height: 15px;
@@ -1093,21 +1087,21 @@ outline-color: transparent;
   border-radius: 4px;
 }
 
-.label-checkbox__checkbox:checked + .label__checkbox-icon{
+.label__checkbox:checked + .label__icon{
   border-color: transparent;
   background-image: url(../images/icons/icon-check.svg);
   background-size: contain;
   background-origin: border-box;
 }
 
-.label-checkbox__label {
+.label__text {
   font-weight: 400;
 font-size: 14px;
 line-height: 1.71;
 letter-spacing: 0.03em;
 color: #757575;
 }
-.label-checkbox__link {
+.label__link {
   color: var(--second-text-link-color);
 }
 
