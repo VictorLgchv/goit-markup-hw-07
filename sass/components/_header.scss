@@ -97,11 +97,12 @@
   }
 }
 
-.logo-header{
+.logo-header {
     &__color {
         color: $fourth-text-color;
       }
 }
+
 .contacts {
   &__item {
     display: flex;
@@ -124,7 +125,7 @@
   }
 }
 
-.contacts-icon{
+.contacts-icon {
   
   &__icon {
     margin-right: 10px;
@@ -138,4 +139,3 @@
     }
   }
 }
-

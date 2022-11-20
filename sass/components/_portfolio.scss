@@ -54,12 +54,12 @@
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
-    color: &headlines-color;
+    color: $headlines-color;
   }
   &__text {
     line-height: 1.87;
     letter-spacing: 0.03em;
-    color: &first-text-color;
+    color: $first-text-color;
   }
 }
 
@@ -80,9 +80,9 @@
     font-weight: 500;
     line-height: 1.62;
     letter-spacing: 0.03em;
-    background-color: &sixth-text-color;
+    background-color: $sixth-text-color;
     cursor: pointer;
-    color: &headlines-color;
+    color: $headlines-color;
     font-family: inherit;
     transition: color 250ms $cubic,
       background-color 250ms $cubic,
@@ -90,10 +90,10 @@
 
       &:hover,
       &:focus {
-        background-color: &second-text-btn-color;
+        background-color: $second-text-btn-color;
         box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
           0px 2px 2px rgba(0, 0, 0, 0.12);
-        color: &third-text-btn-color;
+        color: $third-text-btn-color;
       }
   }
 }
@@ -131,7 +131,7 @@
     line-height: 1.55;
 
     letter-spacing: 0.03em;
-    color: &third-text-color;
+    color: $third-text-color;
     overflow: auto;
   }
 }
