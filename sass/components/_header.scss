@@ -1,0 +1,141 @@
+.header {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  &__container {
+    display: flex;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 50px;
+  }
+}
+.menu {
+  &__logo {
+    display: block;
+    margin-right: 93px;
+    padding: 24px 0;
+
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+
+    color: $second-text-logo-color;
+    text-decoration: none;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    padding: 32px 0;
+
+    text-decoration: none;
+    color: $headlines-color;
+
+    transition: color 250ms $cubic;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -1.8px;
+
+      width: 0;
+      height: 4px;
+      border-radius: 2px;
+
+      background-color: $second-text-link-color;
+      transition: width 0.5s, left 0.5s;
+    }
+    &:hover,
+    &:focus {
+      color: $second-text-link-color;
+
+      &::after{
+        width: 100%;
+        left: 0;
+      }
+    }
+
+    &--active {
+      color: $second-text-link-color;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -1.7px;
+        right: 0;
+
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+
+        background-color: $second-text-link-color;
+      }
+    }
+  }
+}
+
+.logo-header{
+    &__color {
+        color: $fourth-text-color;
+      }
+}
+.contacts {
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+  }
+
+  &__link {
+    display: block;
+    padding: 32px 0;
+
+    text-decoration: none;
+    color: $first-text-color;
+    transition: color 250ms $cubic;
+
+    &:hover,
+    &:focus {
+      color: $second-text-link-color;
+    }
+  }
+}
+
+.contacts-icon{
+  
+  &__icon {
+    margin-right: 10px;
+
+    fill: $first-text-color;
+    transition: fill 250ms $cubic;
+
+    .contacts-icon:hover &,
+    .contacts-icon:focus & {
+      fill: $second-text-link-color;
+    }
+  }
+}
+
